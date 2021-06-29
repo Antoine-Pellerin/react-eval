@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ShowList from './ShowList';
 import 'bootstrap/dist/css/bootstrap.css';
-import shows from './shows.json';
+import App from "./App.js"
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <ShowList shows={shows}/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
