@@ -22,7 +22,7 @@ export default function Search() {
     return(
         <div>
             <div className="searchBar d-flex flex-wrap justify-content-center mb-4">
-                <input type="text" name="searchBar" id="searchBar" onChange={handleSearchTerm} placeholder="Rechercher une série" />
+                <input type="text" name="searchBar" id="searchBar" onChange={handleSearchTerm} placeholder="Find a show" />
             </div>
 
             <div className="search_results d-flex flex-wrap flex-row justify-content-center">
