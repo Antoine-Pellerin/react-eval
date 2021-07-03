@@ -24,7 +24,7 @@ export default function Show(props) {
             <div className="d-flex flex-row justify-content-center mt-3 mb-3">
                 <a className="btn btn-outline-danger " href={show.resource_url} role="button" style={{marginTop : "auto"}}>Get more info</a>
             </div>
-            <Fav id={show.id} state={show.user.favorited}/>
+            <Fav id={show.id} state={show.user.favorited} title={show.title}/>
         </div>
     )
 }

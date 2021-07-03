@@ -2,11 +2,22 @@ import { useState } from "react";
 
 export default function Fav(props) {
 
-    const[favState, setFavState]=useState(false)
+    const {state, id, title} = props
+    const[favState, setFavState]=useState(state)
+    
 
     function makeFav() {
-        return setFavState(!favState)
-    }
+        fetch(`http://localhost:4000/rest/shows/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+              title: title,
+              user: { favorited: !favState } })
+          })
+          .then(response => response.json())
+          .then(setFavState(!favState))
+   }
+
 
     const notFav = (
         <div className="d-flex flex-row justify-content-center mt-3 mb-3">
